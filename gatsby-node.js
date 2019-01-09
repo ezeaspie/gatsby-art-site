@@ -47,6 +47,24 @@ fs.readFile(`./src/pages/data/comicData.json`, 'utf8', function (err, data) {
                               slug: node.fields.slug,        
                   },      
             }) 
+            let harbourComicFiltered = comicData.filter((dataObj)=>{
+              return dataObj.comicId === 0;
+            })
+
+            createPage({
+              path: `heroine-rises`,
+              component:path.resolve(`./src/templates/basic-page.js`),
+              context:{
+                comicData: harbourComicFiltered,
+              }
+            })
+            createPage({
+              path: `/`,
+              component:path.resolve(`./src/templates/basic-page.js`),
+              context:{
+                comicData: harbourComicFiltered,
+              }
+            })
             const template = path.resolve(`./src/templates/comic-page.js`);
 
       // Create pages for each COMIC entry.

@@ -3,10 +3,12 @@ import Layout from '../components/layout'
 import { withPrefix } from 'gatsby'
 import { Link, graphql } from "gatsby"
 import SEO from '../components/seo'
+import Banner from '../components/Banner';
 
 const IndexPage = ({data}) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <Banner />
     <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         <img alt="comic-cover" src={withPrefix('/comics/HeroineRises/00/HR_1_01.png')}/>
     <Link to="/blog/">Go to page blog</Link>

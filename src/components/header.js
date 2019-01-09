@@ -8,7 +8,7 @@ const Header = ({ siteTitle }) => (
       <div className="main-head">
       <Link to="/">
           <h1>{siteTitle}</h1>
-          <p>a creative dream</p>
+          <p>a creative archive</p>
         </Link>
       </div> 
       <nav>

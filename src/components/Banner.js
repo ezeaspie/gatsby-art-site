@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import { Link } from "gatsby"
+import { Link , withPrefix} from "gatsby"
 
-import GalleryPreview from '../images/gallery/The Young Woman and the Sea.jpg';
+import GalleryPreview from '../images/site/WebBanner.jpg';
 
 class Banner extends Component {
 
@@ -14,6 +14,7 @@ class Banner extends Component {
             description:null,
             image:null,
             link:null,
+            isInTransition:false,
         }
     }
 
@@ -22,6 +23,7 @@ class Banner extends Component {
     }
 
     getBannerStateVariables(){
+        let latestChapterId = 0;
         console.log(this.state.bannerState)
         let bannerInfo = [
             {
@@ -31,10 +33,10 @@ class Banner extends Component {
                 link:`/Gallery`,
             },
             {
-                title:"Heroine Rises 1 : Small Time Detective",
+                title:"Heroine Rises",
                 description:"Read the latest pages of my Heroine Rises series!",
-                image:GalleryPreview,
-                link:`/Gallery`,
+                image:withPrefix(`/comics/0/${latestChapterId}/0.png`),
+                link:`/heroine-rises/${latestChapterId}/0`,
             },
             {
                 title:"BLOG",
@@ -48,38 +50,46 @@ class Banner extends Component {
     }
 
     handleBannerUpdateRequest(upOrDown){
-        if(upOrDown){
-            if(this.state.bannerState +1 >= this.state.maxBannerState){
-                this.setState({bannerState:0},this.getBannerStateVariables);
-            }
-            else{
-                console.log(this.state.bannerState+1);
-                this.setState({bannerState:this.state.bannerState+1},this.getBannerStateVariables);
-            }
-        }
-        else{
-            if(this.state.bannerState -1 < 0){
-                this.setState({bannerState:this.state.maxBannerState-1},this.getBannerStateVariables);
-            }
-            else{
-                this.setState({bannerState:this.state.bannerState-1},this.getBannerStateVariables);
-            }
-        }
+        this.setState({isInTransition:true},()=>{
+            setTimeout(()=>{this.setState({isInTransition:false})},2100);
+
+            setTimeout(()=>{
+                if(upOrDown){
+                    if(this.state.bannerState +1 >= this.state.maxBannerState){
+                        this.setState({bannerState:0},this.getBannerStateVariables);
+                    }
+                    else{
+                        console.log(this.state.bannerState+1);
+                        this.setState({bannerState:this.state.bannerState+1},this.getBannerStateVariables);
+                    }
+                }
+                else{
+                    if(this.state.bannerState -1 < 0){
+                        this.setState({bannerState:this.state.maxBannerState-1},this.getBannerStateVariables);
+                    }
+                    else{
+                        this.setState({bannerState:this.state.bannerState-1},this.getBannerStateVariables);
+                    }
+                }
+            },1000);
+        });
     }
 
     render(){
 
         return(
             <div className="banner">
-                <img src={this.state.image} alt="gallery-preview"></img>
-                <div className="back" onClick={()=>{this.handleBannerUpdateRequest(false)}}>(</div>
-                <Link to={this.state.link}>
-                <div className="banner-description">
-                    <h2 className="banner-title">{this.state.title}</h2>
-                    <h3 className="banner-desc">{this.state.description}</h3>
+                <div className={this.state.isInTransition?"banner-content hidden-animate":"banner-content"}>
+                    <img src={this.state.image} alt="gallery-preview"></img>
+                    <div className="back" onClick={()=>{this.handleBannerUpdateRequest(false)}}>(</div>
+                    <Link to={this.state.link}>
+                    <div className="banner-description">
+                        <h2 className="banner-title">{this.state.title}</h2>
+                        <h3 className="banner-desc">{this.state.description}</h3>
+                    </div>
+                    </Link>
+                    <div className="forward" onClick={()=>{this.handleBannerUpdateRequest(true)}}>)</div>
                 </div>
-                </Link>
-                <div className="forward" onClick={()=>{this.handleBannerUpdateRequest(true)}}>)</div>
             </div>
         ) 
     }

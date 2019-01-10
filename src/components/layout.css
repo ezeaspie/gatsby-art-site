@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Staatliches');
 @import url('https://fonts.googleapis.com/css?family=Lobster');
-
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -867,13 +866,56 @@ html{
   position: relative;
   overflow-y: hidden;
   display:flex;
-  align-items:center;
-  align-content:center;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  background: #1d1d1d;
+}
+
+.banner a{
+  position: absolute;
+  top:0;
+  bottom:0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 .banner-description{
-  width:80%;
-  margin:0 10%;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  width:100%;
+  max-width:800px;
+}
+
+.back,
+.forward{
+  position: absolute;
+  top:0;
+  bottom:0;
+  padding: 3em;
+  color:rgba(0,0,0,0);
+  transition: ease-in-out 1s all;
+}
+
+.back:hover,
+.forward:hover{
+   transition: ease-in-out 1s all;
+  cursor: pointer;
+  background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,.8));
+}
+
+.back{
+  left:0;
+  background: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,.6));
+}
+
+.forward{
+  right:0;
+  background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,.6));
 }
 
 .banner h2,
@@ -886,15 +928,17 @@ html{
   box-shadow: 10px 10px rgba(204, 204, 204,.8);
 }
 
+.banner h2{
+  width:50%;
+}
+
 .banner:hover .banner-title {
-  transition:ease-in-out .4s all;
     background: rgba(29, 29, 29, 1);
     box-shadow: 10px 10px rgba(204, 204, 204,1);
 
 }
 
 .banner:hover .banner-desc {
-    transition:ease-in-out .4s all;
     background: rgba(29, 29, 29, 1);
     box-shadow: 10px 10px rgba(204, 204, 204,1);
 }
@@ -904,6 +948,37 @@ html{
   z-index:-1;
   width:100%;
   top:-100px;
+  bottom:0;
+}
+
+
+.banner-content{
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index:1;
+  transition:ease .5s all;
+}
+
+.hidden-animate {
+     animation: hide 2s linear 0s 1;
+}
+
+@keyframes hide {
+  0%{
+   opacity: 1;
+ }
+ 35%{
+   opacity: 0;
+ }
+ 65%{
+   opacity: 0;
+ }
+ 100%{
+   opacity: 1;
+ }
 }
 
 @media screen and (min-width:650px){

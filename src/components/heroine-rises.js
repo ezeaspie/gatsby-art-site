@@ -10,6 +10,7 @@ class HeroineRises extends Component{
     let latestChapter = comicInfo[comicInfo.length-1];
 
     return(
+      <div className="container">
       <div className="heroine-rises">
       <div className="comic-overview">
         <h2 className="comic-title" style={{fontFamily:'Lobster,cursive', fontSize:'2.5em',margin:'.5em',fontWeight:'normal'}}><i>Heroine Rises</i></h2>
@@ -42,6 +43,7 @@ class HeroineRises extends Component{
         </ul>
       </div>
   </div>
+      </div>
     )
   }
 }

@@ -1,4 +1,6 @@
 import React, {Component} from 'react'
+import Img from 'gatsby-image';
+
 
 class GalleryObject extends Component {
   constructor(props){
@@ -28,7 +30,10 @@ class GalleryObject extends Component {
     }
     return(
       <div className="gallery-item">
-        <img className="gallery-image" src={this.props.source} alt={content === null ?null:data.description}></img>
+      {
+        this.props.isGif?<img className="gallery-image" src={this.props.source} alt={content === null ?null:data.description}/>:
+        <Img className="gallery-image" fluid={this.props.source} alt={content === null ?null:data.description} />
+      }
         {content}
       </div>
     )

@@ -12,14 +12,22 @@ class Gallery extends Component {
     let artGallery = [];
 
     data.allFile.edges.map(({ node }) => {
+
+      let isGif = false;
+      if(node.extension === "gif"){
+        isGif =true;
+      }
+
       let artData = artList.filter((dataObject)=>{
         return dataObject.title === node.name;
       });
+
       let artdata = artData[0];
       let object = <GalleryObject 
         data = {artdata}
         key={node.id}
-        source={node.publicURL}
+        source={isGif?node.publicURL:node.childImageSharp.fluid}
+        isGif={isGif}
         />
         if(artdata.featured){
           artGallery.unshift(object);
@@ -47,19 +55,23 @@ class Gallery extends Component {
 export default Gallery;
 
 export const query = graphql`
-  query{
-      allFile(filter: { sourceInstanceName: { eq: "images-gallery" } }) {
-        edges {
-          node {
-            extension
-            dir
-            modifiedTime
-            name
-            relativePath
-            publicURL
-            id
+query{
+  allFile(filter: { sourceInstanceName: { eq: "images-gallery" } }) {
+    edges {
+      node {
+        extension
+        dir
+        modifiedTime
+        name
+        relativePath
+        publicURL
+        id
+        childImageSharp{
+          fluid(maxWidth:800){
+            ...GatsbyImageSharpFluid, 
           }
         }
       }
+    }
   }
-`
+}`

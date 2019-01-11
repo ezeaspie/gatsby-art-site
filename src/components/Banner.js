@@ -13,7 +13,7 @@ class Banner extends Component {
             title:null,
             description:null,
             image:null,
-            link:null,
+            link:`/Gallery`,
             isInTransition:false,
         }
     }

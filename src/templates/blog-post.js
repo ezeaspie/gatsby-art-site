@@ -1,15 +1,20 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
+import Img from "gatsby-image"
 
 export default ({ data }) => {  
     const post = data.markdownRemark;
     console.log(post);  
     return (
     <Layout>
-      <div>        
-          <h1>{post.frontmatter.title}</h1>        
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />     
+      <div className="container">        
+          <Img className="blog-main-img" fluid={post.frontmatter.cover_image.childImageSharp.fluid} alt={post.frontmatter.title}/>        
+          <div className="blog-main-div">
+          <h1>{post.frontmatter.title}</h1>
+          <div  className="blog-main-content" dangerouslySetInnerHTML={{ __html: post.html }} />
+          <Link to="/blog">Return to Blog Index</Link> 
+          </div>      
        </div>    
     </Layout>
   )
@@ -21,4 +26,16 @@ query($slug: String!) {
                html
                      frontmatter { 
                                 title 
-                                 }    }  }`
+                                date
+                                cover_image {
+                                  childImageSharp{
+                                    fluid(maxWidth:1200){
+                                      ...GatsbyImageSharpFluid, 
+                                    }
+                                  }
+                                  publicURL
+                                }
+                                 }
+                                    
+                                }  
+                              }`

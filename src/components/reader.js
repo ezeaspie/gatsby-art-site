@@ -31,7 +31,8 @@ class Reader extends Component {
     render(){
         const comicNameURL = [
             "heroine-rises",
-            "sweetwater"
+            "sweetwater",
+            "one-shots",
         ]
 
 
@@ -39,7 +40,7 @@ class Reader extends Component {
 
         let comicName = comicNameURL[chapterInfo.comicId];
 
-        let imageSource = `/comics/${chapterInfo.comicId}/${chapterInfo.chapterId}/${chapterInfo.currentPage}.png`;
+        let imageSource = `/comics/${chapterInfo.comicId}/${chapterInfo.chapterId}/${chapterInfo.currentPage}.jpg`;
 
         let link = `/${comicName}/${chapterInfo.chapterId}/${chapterInfo.currentPage+1}`;
 

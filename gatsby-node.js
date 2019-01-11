@@ -65,11 +65,13 @@ fs.readFile(`./src/pages/data/comicData.json`, 'utf8', function (err, data) {
         const comicNames = [
           "Heroine Rises",
           "SweetWater",
+          "One Shots"
         ]
 
         const comicNameURL = [
           "heroine-rises",
-          "sweetwater"
+          "sweetwater",
+          "one-shots"
         ]
 
         let chapterTitle = chapter.title;

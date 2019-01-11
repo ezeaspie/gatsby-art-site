@@ -28,5 +28,17 @@
     "chapter":4,
     "pages":2,
     "title":"The First Case"
+    },
+    {
+        "comicId":2,
+        "chapter":0,
+        "pages":3,
+        "title":"Maddie and Jules: The Not-So Dynamic Duo!"
+    },
+    {
+        "comicId":2,
+        "chapter":1,
+        "pages":3,
+        "title":"Maddie and Maxine"
     }
 ]

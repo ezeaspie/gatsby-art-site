@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Link , withPrefix} from "gatsby"
 
 import GalleryPreview from '../images/site/WebBanner.jpg';
+import BlogPreview from '../images/site/blogCover.jpg';
 
 class Banner extends Component {
 
@@ -35,14 +36,14 @@ class Banner extends Component {
             {
                 title:"Heroine Rises",
                 description:"Read the latest pages of my Heroine Rises series!",
-                image:withPrefix(`/comics/0/${latestChapterId}/0.png`),
+                image:withPrefix(`/comics/0/${latestChapterId}/1.jpg`),
                 link:`/heroine-rises/${latestChapterId}/0`,
             },
             {
                 title:"BLOG",
-                description:"Read tutorials and other musings I may have about art!",
-                image:GalleryPreview,
-                link:`/Gallery`,
+                description:"Read commentaries, tutorials, and any other musings I may have about art!",
+                image:BlogPreview,
+                link:`/blog`,
             }
         ]
         let selectedObject = bannerInfo[this.state.bannerState];
@@ -80,7 +81,7 @@ class Banner extends Component {
         return(
             <div className="banner">
                 <div className={this.state.isInTransition?"banner-content hidden-animate":"banner-content"}>
-                    <img src={this.state.image} alt="gallery-preview"></img>
+                    <img src={this.state.image} style={this.state.bannerState===1?{top:'-200px'}:{}}alt="gallery-preview"></img>
                     <div className="back" onClick={()=>{this.handleBannerUpdateRequest(false)}}>(</div>
                     <Link to={this.state.link}>
                     <div className="banner-description">

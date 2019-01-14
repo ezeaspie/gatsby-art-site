@@ -7,7 +7,7 @@ export default ( data ) => {
     let comicInfo = data.pageContext; 
     return (
     <Layout>
-        <SEO title="Heroine Rises" keywords={[`Heroine`, `Rises`, `comic`]} />
+        <SEO title={comicInfo.comicTitle} keywords={[`Heroine`, `Rises`, `comic`]} />
         <HeroineRises comicInfo={comicInfo}/>
     </Layout>
   )

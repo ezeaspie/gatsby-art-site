@@ -4,13 +4,14 @@ import { Link, graphql } from "gatsby"
 import SEO from '../components/seo'
 import Banner from '../components/Banner';
 import Img from 'gatsby-image';
+import comicData from '../pages/data/comicData';
 
 const IndexPage = ({data}) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <Banner />
     <div className="container">
-    <h4>Recent Blog Posts</h4>
+    <h4 className="main-header">Recent Blog Posts</h4>
     <div className="blog-preview-list">
       {
         data.allMarkdownRemark.edges.map(({ node })=>{
@@ -28,6 +29,19 @@ const IndexPage = ({data}) => (
           )
         })
       }
+    </div>
+    <h4 className="main-header">Comics</h4>
+    <div className="comic-index">
+    {
+      comicData.map((comic)=>{
+        return(
+          <Link className="comic-index-preview" to={comic.url}>
+            <div className="comic-index-preview-image" style={{backgroundImage:`url(${comic.image})`}}></div>
+            <h4>{comic.title}</h4>
+          </Link>
+        )
+      })
+    }
     </div>
     </div>
   </Layout>

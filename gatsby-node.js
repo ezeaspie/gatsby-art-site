@@ -51,11 +51,26 @@ fs.readFile(`./src/pages/data/comicData.json`, 'utf8', function (err, data) {
               return dataObj.comicId === 0;
             })
 
+            let oneShotsFiltered = comicData.filter((dataObj)=>{
+              return dataObj.comicId === 2;
+            })
+
             createPage({
               path: `heroine-rises`,
-              component:path.resolve(`./src/templates/basic-page.js`),
+              component:path.resolve(`./src/templates/comic-overview.js`),
               context:{
                 comicData: harbourComicFiltered,
+                comicId:0,
+                comicTitle:"Heroine Rises"
+              }
+            })
+            createPage({
+              path:'one-shots',
+              component:path.resolve(`./src/templates/comic-overview.js`),
+              context:{
+                comicData:oneShotsFiltered,
+                comicId:2,
+                comicTitle:"One Shots"
               }
             })
             const template = path.resolve(`./src/templates/comic-page.js`);
@@ -111,7 +126,6 @@ fs.readFile(`./src/pages/data/comicData.json`, 'utf8', function (err, data) {
               comicId: comicSeriesID,
             }
           });
-
         }
         
         });   

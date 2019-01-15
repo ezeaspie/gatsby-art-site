@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import comicData from '../pages/data/comicData';
+import comicData from '../data/comicData';
 
 class Comics extends Component {
   render(){

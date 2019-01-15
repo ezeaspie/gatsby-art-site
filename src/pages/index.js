@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import SEO from '../components/seo'
 import Banner from '../components/Banner';
 import Img from 'gatsby-image';
-import comicData from '../pages/data/comicData';
+import comicData from '../data/comicData';
 
 const IndexPage = ({data}) => (
   <Layout>

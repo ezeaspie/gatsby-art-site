@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import { Link, withPrefix } from "gatsby"
-import comicData from '../pages/data/comicData';
+import comicData from '../data/comicData';
 
 class HeroineRises extends Component{
 

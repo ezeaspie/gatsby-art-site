@@ -16,7 +16,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
-fs.readFile(`./src/pages/data/comicData.json`, 'utf8', function (err, data) {
+fs.readFile(`./src/data/comicData.json`, 'utf8', function (err, data) {
     if (err) throw err;
     comicData = JSON.parse(data);
     

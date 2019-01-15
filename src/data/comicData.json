@@ -1,0 +1,20 @@
+[
+    {
+    "comicId":0,
+    "chapter":0,
+    "pages":12,
+    "title":"Small Time Detective"
+    },
+    {
+        "comicId":1,
+        "chapter":0,
+        "pages":3,
+        "title":"Maddie and Jules: The Not-So Dynamic Duo!"
+    },
+    {
+        "comicId":1,
+        "chapter":1,
+        "pages":3,
+        "title":"Maddie and Maxine"
+    }
+]

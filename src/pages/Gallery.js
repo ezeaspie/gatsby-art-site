@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import artList from './data/artData';
+import artList from '../data/artData';
 import GalleryObject from '../components/GalleryObject';
 
 

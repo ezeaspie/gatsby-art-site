@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import profile from '../images/site/me-e-mes.jpg';
+import profile from '../images/site/me.jpg';
 
 class About extends Component {
   render(){

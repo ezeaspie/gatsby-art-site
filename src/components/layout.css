@@ -1050,6 +1050,24 @@ html{
   line-height: 1.8em;
 }
 
+.blog-main-content img {
+    box-sizing: border-box;
+  border:solid 5px #2d2d2d;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,.3);
+  width:70%;
+  margin:0 15%;
+  
+}
+.blog-main-content h1,
+.blog-main-content h2,
+.blog-main-content h3,
+.blog-main-content h4,
+.blog-main-content h5,
+.blog-main-content h6{
+  font-family:'Staatliches';
+}
+
 .blog-main-div{
   display: flex;
   flex-direction: column;
@@ -1231,7 +1249,6 @@ html{
   opacity: .8;
 }
 
-
 .profile-content b{
   font-family:'Staatliches';
 }
@@ -1245,6 +1262,60 @@ html{
   width:80%;
 }
 
+footer{
+  background: #1d1d1d;
+  color:#edeae5;
+  margin-top:1em;
+  display: flex;
+  flex-direction: column;
+}
+
+footer .copyright{
+  text-align: center;
+  padding:.5em;
+}
+
+footer ul {
+  list-style-type: none;
+  margin:1em;
+  text-align: center;
+}
+
+footer ul a {
+  display: inline-block;
+  width: 100%;
+  transition:ease-in-out .4s opacity;
+}
+
+footer ul li{
+  border-bottom: solid 1px;
+  margin: 0;
+  padding: .5em;
+}
+
+footer ul a:hover {
+  opacity: .8;
+  transition:ease-in-out .4s opacity;
+}
+footer ul .footer-title {
+  font-family: 'Staatliches';
+  font-weight: bold;
+  font-size:120%;
+  border: none;
+  border-bottom: solid 2px;
+}
+
+footer a {
+  color:#edeae5;
+  
+}
+
+.footer-main{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
 
 @-webkit-keyframes hide {
   0%{
@@ -1370,6 +1441,13 @@ html{
   width: 100%;
     max-width: none;
 } 
+  
+  .footer-main {
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: normal;
+    align-items: normal;
+  }
 
 }
 

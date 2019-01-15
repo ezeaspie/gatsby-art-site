@@ -25,7 +25,6 @@ class Banner extends Component {
 
     getBannerStateVariables(){
         let latestChapterId = 0;
-        console.log(this.state.bannerState)
         let bannerInfo = [
             {
                 title:"GALLERY",
@@ -34,7 +33,7 @@ class Banner extends Component {
                 link:`/Gallery`,
             },
             {
-                title:"Heroine Rises",
+                title:"HEROINE RISES",
                 description:"Read the latest pages of my Heroine Rises series!",
                 image:withPrefix(`/comics/0/${latestChapterId}/1.jpg`),
                 link:`/heroine-rises/${latestChapterId}/0`,
@@ -60,7 +59,6 @@ class Banner extends Component {
                         this.setState({bannerState:0},this.getBannerStateVariables);
                     }
                     else{
-                        console.log(this.state.bannerState+1);
                         this.setState({bannerState:this.state.bannerState+1},this.getBannerStateVariables);
                     }
                 }
@@ -81,7 +79,7 @@ class Banner extends Component {
         return(
             <div className="banner">
                 <div className={this.state.isInTransition?"banner-content hidden-animate":"banner-content"}>
-                    <img src={this.state.image} style={this.state.bannerState===1?{top:'-200px'}:{}}alt="gallery-preview"></img>
+                    <img src={this.state.image} style={this.state.bannerState!==0?{top:'-200px'}:{}}alt="gallery-preview"></img>
                     <div className="back" onClick={()=>{this.handleBannerUpdateRequest(false)}}>(</div>
                     <Link to={this.state.link}>
                     <div className="banner-description">

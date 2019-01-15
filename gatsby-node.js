@@ -19,7 +19,6 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 fs.readFile(`./src/pages/data/comicData.json`, 'utf8', function (err, data) {
     if (err) throw err;
     comicData = JSON.parse(data);
-    console.log(comicData);
     
     exports.createPages = ({ graphql, actions }) => {
       const { createPage } = actions  
@@ -37,7 +36,6 @@ fs.readFile(`./src/pages/data/comicData.json`, 'utf8', function (err, data) {
         }
       `).then(result => {
         result.data.allMarkdownRemark.edges.forEach(({ node }) => { 
-          console.log('created page for blog post');     
             createPage({       
                  path: node.fields.slug,        
                  component: path.resolve(`./src/templates/blog-post.js`),        
@@ -52,7 +50,7 @@ fs.readFile(`./src/pages/data/comicData.json`, 'utf8', function (err, data) {
             })
 
             let oneShotsFiltered = comicData.filter((dataObj)=>{
-              return dataObj.comicId === 2;
+              return dataObj.comicId === 1;
             })
 
             createPage({
@@ -69,7 +67,7 @@ fs.readFile(`./src/pages/data/comicData.json`, 'utf8', function (err, data) {
               component:path.resolve(`./src/templates/comic-overview.js`),
               context:{
                 comicData:oneShotsFiltered,
-                comicId:2,
+                comicId:1,
                 comicTitle:"One Shots"
               }
             })
@@ -79,13 +77,11 @@ fs.readFile(`./src/pages/data/comicData.json`, 'utf8', function (err, data) {
       comicData.forEach(( chapter ) => {
         const comicNames = [
           "Heroine Rises",
-          "SweetWater",
           "One Shots"
         ]
 
         const comicNameURL = [
           "heroine-rises",
-          "sweetwater",
           "one-shots"
         ]
 
@@ -109,7 +105,6 @@ fs.readFile(`./src/pages/data/comicData.json`, 'utf8', function (err, data) {
         for (let i = 0 ; i<chapterPages ; i++){
           let pathName = `${comicId}/${chapterId}/${i}`
           let currentPage = i;
-          console.log(pathName);
           createPage({
             path:pathName,
             component: template,

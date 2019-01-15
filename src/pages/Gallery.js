@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import artList from './data/artData';
@@ -19,8 +19,13 @@ class Gallery extends Component {
       }
 
       let artData = artList.filter((dataObject)=>{
+        if(dataObject.title === "Heroine Rises Cover"){
+          console.log(dataObject.title,node.name);
+        }
         return dataObject.title === node.name;
       });
+
+      console.log(artData);
 
       let artdata = artData[0];
       let object = <GalleryObject 
@@ -43,11 +48,9 @@ class Gallery extends Component {
         <SEO title="Gallery" />
         <div className="gallery">
           {artGallery.map((object)=>{
-            console.log(object)
             return object;
           })}
         </div>
-      <Link to="/">Go back to the homepage</Link>
     </Layout>
     )
   }

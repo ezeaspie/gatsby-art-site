@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Ezequiel Espinoza Diaz`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `Artist Website for Ezequiel Espinoza. View my artwork, read my blog posts, and get the latest chapters of my comics!`,
+    author: `Ezequiel Espinoza Diaz`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

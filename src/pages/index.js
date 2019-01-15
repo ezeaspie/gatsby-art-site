@@ -21,6 +21,7 @@ const IndexPage = ({data}) => (
               <Img className="blog-preview-image" fluid={node.frontmatter.cover_image.childImageSharp.fluid} alt={node.frontmatter.title}/>        
               <div className="blog-preview-content">
                 <h5>{node.frontmatter.title}</h5>
+                <h6>{node.frontmatter.date}</h6>
                 <p>{node.excerpt}</p>
               </div>            
             </div>
@@ -35,7 +36,7 @@ const IndexPage = ({data}) => (
     {
       comicData.map((comic)=>{
         return(
-          <Link className="comic-index-preview" to={comic.url}>
+          <Link className="comic-index-preview" to={comic.url} key={comic.title}>
             <div className="comic-index-preview-image" style={{backgroundImage:`url(${comic.image})`}}></div>
             <h4>{comic.title}</h4>
           </Link>

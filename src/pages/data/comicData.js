@@ -1,6 +1,9 @@
 import heroineRisesImage from '../posts/postImages/heroine-rises-cover.jpg';
 //CONVERT PNG TO JPG 
 import SweetWaterImage from '../../images/site/sw.png';
+import OneShotCover from '../../images/site/OneShotsCover.jpg'
+import heroineRisesCoverImage from '../../images/site/heroine-rises.png';
+
 
 import React from 'react';
 
@@ -10,6 +13,7 @@ let comicData = [
       id:0,
       url:"heroine-rises",
       image: heroineRisesImage,
+      coverImage: heroineRisesCoverImage,
       showImages:false,
       synopsis:
       <div>
@@ -23,6 +27,7 @@ let comicData = [
       id:2,
       url:"one-shots",
       image: SweetWaterImage,
+      coverImage:OneShotCover,
       showImages:true,
       synopsis: 
       <div>

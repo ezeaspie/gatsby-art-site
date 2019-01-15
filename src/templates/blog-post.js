@@ -12,6 +12,7 @@ export default ({ data }) => {
           <Img className="blog-main-img" fluid={post.frontmatter.cover_image.childImageSharp.fluid} alt={post.frontmatter.title}/>        
           <div className="blog-main-div">
           <h1>{post.frontmatter.title}</h1>
+          <h2>{post.frontmatter.date}</h2>
           <div  className="blog-main-content" dangerouslySetInnerHTML={{ __html: post.html }} />
           <Link to="/blog">Return to Blog Index</Link> 
           </div>      

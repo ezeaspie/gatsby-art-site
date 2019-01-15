@@ -15,6 +15,7 @@ const Blog = ({data}) => (
               <Img className="blog-preview-image" fluid={node.frontmatter.cover_image.childImageSharp.fluid} alt={node.frontmatter.title}/>        
               <div className="blog-preview-content">
                 <h5>{node.frontmatter.title}</h5>
+                <h6>{node.frontmatter.date}</h6>
                 <p>{node.excerpt}</p>
               </div>            
             </div>
@@ -29,7 +30,7 @@ export default Blog
 
 export const query = graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark (sort:{order:DESC, fields: [frontmatter___date]}){
       totalCount
       edges {
         node {

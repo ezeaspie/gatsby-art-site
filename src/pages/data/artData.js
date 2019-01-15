@@ -310,7 +310,30 @@ const artList = [
         medium: 'Mixed Media',
         id: 7,
     },
-
+    {
+        title: "Northern Serenity Flag",
+        description: "An image of what the flag of Northen Serenity looks like",
+        date: ["June 28, 2018", "2018"],
+        featured: false,
+        medium: 'Digital',
+        id: 7,
+    },
+    {
+        title: "Heroine Rises Cover",
+        description: "The Cover for the first arc of Heroine Rises",
+        date: ["January 13, 2019", "2019"],
+        featured: true,
+        medium: 'Digital',
+        id: 7,
+    },
+    {
+        title: "Teresa's Tidings",
+        description: "The third pop-image I made, where a woman is holding a plate of tacos.",
+        date: ["September 30, 2018", "2018"],
+        featured: true,
+        medium: 'Digital',
+        id: 7,
+    },
 ]
 
 export default artList; 

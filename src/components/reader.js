@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import { Link, withPrefix } from 'gatsby'
-
+import { Link, withPrefix } from 'gatsby';
+import comicData from '../pages/data/comicData';
 
 class Reader extends Component {
     constructor(props){
@@ -29,16 +29,10 @@ class Reader extends Component {
     }
 
     render(){
-        const comicNameURL = [
-            "heroine-rises",
-            "sweetwater",
-            "one-shots",
-        ]
-
 
         let chapterInfo = this.props.chapterInfo;
 
-        let comicName = comicNameURL[chapterInfo.comicId];
+        let comicName = comicData[chapterInfo.comicId].url;
 
         let imageSource = `/comics/${chapterInfo.comicId}/${chapterInfo.chapterId}/${chapterInfo.currentPage}.jpg`;
 

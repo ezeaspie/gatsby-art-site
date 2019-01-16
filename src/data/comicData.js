@@ -1,8 +1,8 @@
 import heroineRisesImage from '../pages/posts/postImages/heroine-rises-cover.jpg';
 //CONVERT PNG TO JPG 
-import SweetWaterImage from '../images/site/sw.png';
+import SweetWaterImage from '../images/site/sw.jpg';
 import OneShotCover from '../images/site/OneShotsCover.jpg'
-import heroineRisesCoverImage from '../images/site/heroine-rises.png';
+import heroineRisesCoverImage from '../images/site/heroine-rises.jpg';
 
 
 import React from 'react';

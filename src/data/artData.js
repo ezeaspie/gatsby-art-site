@@ -1,6 +1,7 @@
 const artList = [
     {
         title: 'Oh Julie!',
+        imgsrc:"OhJulie",
         description: 'A stylized version of my comic style, with a focus on bold colors, heavy lines, and half-tone shading.',
         date: ["14 August 2018", "2018"],
         featured: true,
@@ -8,7 +9,7 @@ const artList = [
         id: 0,
     },
     {
-        image: '/images/MaxineRubin.jpg',
+        imgsrc:"MaxineRubin",
         title: 'Maxine Rubin',
         description: 'A digital concept portrait for a character that focused on more detailed shading.',
         date: ["December 2017", "2017"],
@@ -17,7 +18,7 @@ const artList = [
         id: 1,
     },
     {
-        image: '/images/ClarissasRegrets.jpg',
+        imgsrc:"ClarissasRegrets",
         title: "Clarissa's Regrets",
         description: "Another stylized portrait of a character with Blonde Hair and a distressed look.",
         date: ["16 August 2018", "2018"],
@@ -26,17 +27,7 @@ const artList = [
         id: 2,
     },
     {
-        image: 'https://78.media.tumblr.com/ee3d313fccf37e3d760f462f98133b24/tumblr_p7ct00zAFY1x9h01jo1_540.jpg',
-        title: "Odessa",
-        description: "An early imaginative portrait of a woman with stylized hair",
-        date: ["May 2016", "2016"],
-        categories: ['mixed'],
-        featured: true,
-        medium: 'Mixed Media',
-        id: 3,
-    },
-    {
-        image: '/images/HarbourCover1.jpg',
+        imgsrc:"HarbourConceptCover",
         title: "Harbour Concept Cover",
         description: "An early concept of a cover for a novel I was writing.",
         date: ["June 12, 2018", "2018"],
@@ -45,7 +36,7 @@ const artList = [
         id: 4,
     },
     {
-        image: '/images/MadelineHarbour3.jpg',
+        imgsrc:"MadelineHarbourConcept2",
         title: "Madeline Harbour Concept 2",
         description: "A pencil drawing of an original character of mine.",
         date: ["November 20, 2017", "2017"],
@@ -54,7 +45,7 @@ const artList = [
         id: 20,
     },
     {
-        image: '/images/Lost.jpg',
+        imgsrc:"Lost",
         title: "Lost",
         description: "An image of a blue haired woman with tape around her mouth.",
         date: ["January 3, 2017", "2017"],
@@ -63,7 +54,7 @@ const artList = [
         id: 5,
     },
     {
-        image: '/images/TheYoungestBrother.jpg',
+        imgsrc:"TheYoungestBrother",
         title: "The Youngest Brother",
         description: "A pencil drawing of my younger brother.",
         date: ["August 20, 2016", "2016"],
@@ -72,7 +63,7 @@ const artList = [
         id: 29,
     },
     {
-        image: '/images/SR.jpg',
+        imgsrc:"S.R",
         title: "S.R",
         description: "A digital painting depicting a woman in a mask.",
         date: ["October 31, 2017", "2017"],
@@ -81,7 +72,7 @@ const artList = [
         id: 6,
     },
     {
-        image: '/images/ClarissaLane.jpg',
+        imgsrc:"ClarissaLane",
         title: "Clarissa Lane",
         description: "A pencil on paper drawing of a woman wearing a turtleneck.",
         date: ["February 5, 2017", "2017"],
@@ -90,7 +81,7 @@ const artList = [
         id: 8,
     },
     {
-        image: '/images/CompositeLego.jpg',
+        imgsrc:"LegoComposite",
         title: "Lego Composite",
         description: "A photo mashup depicting lego figurines standing in a lit outdoor walkway.",
         date: ["February 22, 2015", "2015"],
@@ -99,7 +90,7 @@ const artList = [
         id: 9,
     },
     {
-        image: '/images/DrawMe.jpg',
+        imgsrc:"UntitledI",
         title: "Untitled I",
         description: "A digital sketch of a girl with purple hair",
         date: ["December 20, 2016", "2016"],
@@ -108,7 +99,7 @@ const artList = [
         id: 10,
     },
     {
-        image: '/images/Fuerza.jpg',
+        imgsrc:"Fuerza",
         title: "Fuerza",
         description: "A pencil drawing showing a woman lifting a bar over her head",
         date: ["August 10, 2016", "2016"],
@@ -117,7 +108,7 @@ const artList = [
         id: 11,
     },
     {
-        image: '/images/HarbourCover2.jpg',
+        imgsrc:"HarbourCover2",
         title: "Harbour Cover 2",
         description: "A digital magazine sketch depicting my fictional character : Madeline Harbour.",
         date: ["January 9, 2017", "2017"],
@@ -126,7 +117,7 @@ const artList = [
         id: 12,
     },
     {
-        image: '/images/IslaIsolada.jpg',
+        imgsrc:"IslaIsolada",
         title: "Isla Isolada",
         description: "A digital sketch in a grayscale setting depicting a girl in front of a sea cave.",
         date: ["April 24, 2018", "2018"],
@@ -135,7 +126,7 @@ const artList = [
         id: 13,
     },
     {
-        image: '/images/JulianGaitan.jpg',
+        imgsrc:"JulianGaitan",
         title: "Julian Gaitan",
         description: "A pencil drawing of one of my fictional characters : Julian Gaitan.",
         date: ["January 3,2017", "2017"],
@@ -144,7 +135,7 @@ const artList = [
         id: 14,
     },
     {
-        image: '/images/JulietteMaxine.jpg',
+        imgsrc:"JulietteandMaxine",
         title: "Juliette and Maxine",
         description: "A very early panel of a comic I am writing where two girls confront each other indoors.",
         date: ["April 22, 2018", "2018"],
@@ -153,8 +144,8 @@ const artList = [
         id: 15,
     },
     {
-        image: '/images/JulietteSandover2.jpg',
-        title: "Juliette Sandover",
+        imgsrc:"JulietteSandover",
+        title: "Juliette Sandover First Concept",
         description: "A digital portrait of a woman with brown hair.",
         date: ["February 20, 2018", "2018"],
         featured: true,
@@ -162,7 +153,7 @@ const artList = [
         id: 16,
     },
     {
-        image: '/images/JulietteSandover1.jpg',
+        imgsrc:"JulietteSandoverII",
         title: "Juliette Sandover II",
         description: "A pencil portrait of a fictional character: Juliette Sandover..",
         date: ["January 1, 2017", "2017"],
@@ -171,7 +162,7 @@ const artList = [
         id: 17,
     },
     {
-        image: '/images/JulietteSandover3.jpg',
+        imgsrc:"JulietteSandoverIII",
         title: "Juliette Sandover III",
         description: "Another face concept for Juliette Sandover..",
         date: ["April 1, 2017", "2017"],
@@ -180,7 +171,7 @@ const artList = [
         id: 18,
     },
     {
-        image: '/images/MadelineHarbour1.jpg',
+        imgsrc:"MadelineBodyConceptII",
         title: "Madeline Body Concept II",
         description: "A digital full body portrait of Madeline Harbour, ",
         date: ["April 17, 2018", "2018"],
@@ -189,7 +180,7 @@ const artList = [
         id: 19,
     },
     {
-        image: '/images/MadelineHarbour4.jpg',
+        imgsrc:"MadelineHarbourConcept1",
         title: "Madeline Harbour Concept 1",
         description: "A portrait of Madeline Harbour, a fictional character of mine.",
         date: ["December 29, 2016", "2016"],
@@ -198,7 +189,7 @@ const artList = [
         id: 21,
     },
     {
-        image: '/images/MadelineHarbour5.jpg',
+        imgsrc:"MadelineHarbourBodyConceptI",
         title: "Madeline Harbour Body Concept I",
         description: "A full body drawing of Madeline Harbour.",
         date: ["December 28, 2016", "2016"],
@@ -207,7 +198,7 @@ const artList = [
         id: 22,
     },
     {
-        image: '/images/MadelineHarbour2.jpg',
+        imgsrc:"MadelineHarbourConcept3",
         title: "Madeline Harbour Concept 3",
         description: "A digital portrait of the lead character Madeline Harbour.",
         date: ["August 10, 2017", "2017"],
@@ -216,7 +207,7 @@ const artList = [
         id: 23,
     },
     {
-        image: '/images/MaxineRubin2.jpg',
+        imgsrc:"MaxineRubinBodyConcept",
         title: "Maxine Rubin Body Concept",
         description: "A concept drawing for Maxine Rubin, one of my fictional characters.",
         date: ["July 20, 2017", "2017"],
@@ -225,7 +216,7 @@ const artList = [
         id: 24,
     },
     {
-        image: '/images/MaxineRubin3.jpg',
+        imgsrc:"MaxineRubinComposition",
         title: "Maxine Rubin Composition",
         description: "A piece in where Maxine Rubin is standing in front of a flag of the city of Northern Serenity.",
         date: ["June 26, 2018", "2018"],
@@ -234,7 +225,7 @@ const artList = [
         id: 25,
     },
     {
-        image: '/images/Splash.jpg',
+        imgsrc:"Splash",
         title: "Splash",
         description: "A rather abstract digital composition portrait of myself.",
         date: ["May 8, 2016", "2016"],
@@ -243,7 +234,7 @@ const artList = [
         id: 26,
     },
     {
-        image: '/images/SR2.jpg',
+        imgsrc:"UntitledII",
         title: "Untitled II",
         description: "A digital drawing of a black haired woman wearing a purple dress.",
         date: ["June 21, 2017", "2017"],
@@ -252,7 +243,7 @@ const artList = [
         id: 27,
     },
     {
-        image: '/images/TheSkeleton.jpg',
+        imgsrc:"skeleton",
         title: "The Skeleton who Dressed As My Mother",
         description: "A drawing of a feminine skeleton with patterns all over.",
         date: ["July 28, 2016", "2016"],
@@ -261,7 +252,7 @@ const artList = [
         id: 28,
     },
     {
-        image: '/images/UnionHarbor.jpg',
+        imgsrc:"unionharbor",
         title: "Union Harbor - Market",
         description: "A enviornment concept depicting a street with various shops.",
         date: ["June 3, 2018", "2018"],
@@ -270,7 +261,7 @@ const artList = [
         id: 30,
     },
     {
-        image: '/images/Bebe.jpg',
+        imgsrc:"Bebe",
         title: "Bebe",
         description: "An early pencil drawing of singer-songwriter Bebe Rexha",
         date: ["October 22, 2016", "2016"],
@@ -279,6 +270,7 @@ const artList = [
         id: 7,
     },
     {
+        imgsrc:"womanAndSea",
         title: "The Young Woman and the Sea",
         description: "A drawing of Maxine Rubin facing the marketplace of Union Harbor.",
         date: ["November 20, 2018", "2018"],
@@ -287,6 +279,7 @@ const artList = [
         id: 7,
     },
     {
+        imgsrc:"NorthernSerenity",
         title: "Northern Serenity",
         description: "A map of the fictional island city known as Northern Serenity",
         date: ["September 22, 2018", "2018"],
@@ -295,6 +288,7 @@ const artList = [
         id: 7,
     },
     {
+        imgsrc:"FridayNightKaraoke",
         title: "Friday Night Karaoke",
         description: "A looping gif of woman singing lyrics.",
         date: ["December 21, 2018", "2018"],
@@ -303,6 +297,7 @@ const artList = [
         id: 7,
     },
     {
+        imgsrc:"HeroineRisesComicPage",
         title: "Heroine Rises Comic Page",
         description: "A concept page from my comic series Heroine Rises.",
         date: ["November 29, 2018", "2018"],
@@ -311,6 +306,7 @@ const artList = [
         id: 7,
     },
     {
+        imgsrc:"NorthernSerenityFlag",
         title: "Northern Serenity Flag",
         description: "An image of what the flag of Northen Serenity looks like",
         date: ["June 28, 2018", "2018"],
@@ -319,17 +315,10 @@ const artList = [
         id: 7,
     },
     {
+        imgsrc:"HeroineRisesCover",
         title: "Heroine Rises Cover",
         description: "The Cover for the first arc of Heroine Rises",
         date: ["January 13, 2019", "2019"],
-        featured: true,
-        medium: 'Digital',
-        id: 7,
-    },
-    {
-        title: "Teresa's Tidings",
-        description: "The third pop-image I made, where a woman is holding a plate of tacos.",
-        date: ["September 30, 2018", "2018"],
         featured: true,
         medium: 'Digital',
         id: 7,

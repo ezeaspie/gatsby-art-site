@@ -19,13 +19,8 @@ class Gallery extends Component {
       }
 
       let artData = artList.filter((dataObject)=>{
-        if(dataObject.title === "Heroine Rises Cover"){
-          console.log(dataObject.title,node.name);
-        }
-        return dataObject.title === node.name;
+        return dataObject.imgsrc === node.name;
       });
-
-      console.log(artData);
 
       let artdata = artData[0];
       let object = <GalleryObject 

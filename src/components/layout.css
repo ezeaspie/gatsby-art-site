@@ -858,6 +858,10 @@ html{
   justify-content: space-around;
 }
 
+.comic-chapter-list a{
+  margin:0 1em;
+}
+
 .comic-chapter-list li,
 .current-chapter a
 {

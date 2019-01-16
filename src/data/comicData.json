@@ -16,5 +16,11 @@
         "chapter":1,
         "pages":3,
         "title":"Maddie and Maxine"
+    },
+    {
+        "comicId":1,
+        "chapter":2,
+        "pages":8,
+        "title":"Maxine : Disillusioned"
     }
 ]

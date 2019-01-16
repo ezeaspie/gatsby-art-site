@@ -12,6 +12,8 @@ class HeroineRises extends Component{
 
     let latestChapter = comicInfo[comicInfo.length-1];
 
+    console.log(comicMeta);
+
     return(
       <div className="container">
       <div className="heroine-rises">

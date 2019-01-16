@@ -24,7 +24,7 @@ let comicData = [
     },
     {
       title:"One Shots",
-      id:2,
+      id:1,
       url:"one-shots",
       image: SweetWaterImage,
       coverImage:OneShotCover,

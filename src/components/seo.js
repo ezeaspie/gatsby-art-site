@@ -54,6 +54,10 @@ function SEO({ description, lang, meta, keywords, title }) {
                 name: `twitter:description`,
                 content: metaDescription,
               },
+              {
+                name:"google-site-verification",
+                content:"fQEcXEdy_JVKdVhF6v8qtmLcKY6b6_BYPAml55rsvVQ",
+              }
             ]
               .concat(
                 keywords.length > 0

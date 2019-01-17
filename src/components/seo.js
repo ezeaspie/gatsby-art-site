@@ -57,6 +57,10 @@ function SEO({ description, lang, meta, keywords, title }) {
               {
                 name:"google-site-verification",
                 content:"fQEcXEdy_JVKdVhF6v8qtmLcKY6b6_BYPAml55rsvVQ",
+              },
+              {
+                name:"msvalidate.01",
+                content:"4F76F56C96290D134473EC83048EEBC5",
               }
             ]
               .concat(

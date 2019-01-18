@@ -722,15 +722,17 @@ header ul{
 
 header li{
   font-family: 'Staatliches';
-  padding: .5em;
   margin: 0;
+  width: 100%;
 }
 header ul a{
+  padding: .5em;
   text-align: center;
   border-left:solid 1px #d3d3d3;
   border-right:solid 1px #d3d3d3;
   transition:ease .5s all;
   border-bottom:solid 1px #d3d3d3;
+  width: 100%;
 }
 
 header a:hover{
@@ -1398,7 +1400,6 @@ footer a {
   justify-content: space-around;
 }
   header ul a{
-  width:33%;
   border-bottom:none;
 }
   

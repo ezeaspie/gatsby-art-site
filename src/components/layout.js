@@ -46,7 +46,7 @@ const Layout = ({ children }) => (
             </ul>
             </div>
             <div className="copyright">
-            <small>© 2019, Built with Gatsby and React by Ezequiel Espinoza Diaz</small>
+            <small>© 2019, Built with Gatsby by Ezequiel Espinoza Diaz</small>
             </div>
           </footer>
         </div>

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { Link, withPrefix } from 'gatsby';
+import Instagram from '../images/site/instagram.png';
 import comicData from '../data/comicData';
 
 class Reader extends Component {
@@ -118,6 +119,9 @@ class Reader extends Component {
                     </Link>
                 </div>
                 <h5 style={{textAlign:"center"}}>Page {chapterInfo.currentPage+1}</h5>
+                <ul className="support-links">
+                    <li><a href="https://www.instagram.com/ezeaspie/"><img src={Instagram} alt="instagram-logo"></img>Follow Me on Instagram!</a></li>
+                </ul>
             </div>
         )
     }

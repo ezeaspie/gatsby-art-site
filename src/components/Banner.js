@@ -24,7 +24,7 @@ class Banner extends Component {
     }
 
     getBannerStateVariables(){
-        let latestChapterId = 0;
+        let latestChapterId = 2;
         let bannerInfo = [
             {
                 title:"GALLERY",
@@ -33,7 +33,7 @@ class Banner extends Component {
                 link:`/Gallery`,
             },
             {
-                title:"HEROINE RISES",
+                title:`HEROINE RISES CHAPTER ${latestChapterId +1}`,
                 description:"Read the latest pages of my Heroine Rises series!",
                 image:withPrefix(`/comics/0/${latestChapterId}/1.jpg`),
                 link:`/heroine-rises/${latestChapterId}/0`,

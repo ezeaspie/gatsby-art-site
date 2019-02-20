@@ -24,7 +24,7 @@ class Banner extends Component {
     }
 
     getBannerStateVariables(){
-        let latestChapterId = 2;
+        let latestChapterId = 3;
         let bannerInfo = [
             {
                 title:"GALLERY",

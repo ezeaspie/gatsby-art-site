@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import { Link , withPrefix} from "gatsby"
+import { Link , withPrefix} from "gatsby";
+import comicData from '../data/comicData.json';
 
 import GalleryPreview from '../images/site/WebBanner.jpg';
 import BlogPreview from '../images/site/blogCover.jpg';
@@ -21,10 +22,16 @@ class Banner extends Component {
 
     componentDidMount(){
         this.getBannerStateVariables();
+        
+    }
+
+    getCurrentHeroineRisesChapter = () => {
+        let comics = comicData.filter(comicObject=>comicObject.comicId===0);
+        return comics.length;
     }
 
     getBannerStateVariables(){
-        let latestChapterId = 3;
+        let latestChapterId = this.getCurrentHeroineRisesChapter();
         let bannerInfo = [
             {
                 title:"GALLERY",
@@ -33,10 +40,10 @@ class Banner extends Component {
                 link:`/Gallery`,
             },
             {
-                title:`HEROINE RISES CHAPTER ${latestChapterId +1}`,
+                title:`HEROINE RISES CHAPTER ${latestChapterId}`,
                 description:"Read the latest pages of my Heroine Rises series!",
-                image:withPrefix(`/comics/0/${latestChapterId}/1.jpg`),
-                link:`/heroine-rises/${latestChapterId}/0`,
+                image:withPrefix(`/comics/0/${latestChapterId-1}/1.jpg`),
+                link:`/heroine-rises/${latestChapterId-1}/0`,
             },
             {
                 title:"BLOG",

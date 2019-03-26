@@ -19,23 +19,35 @@ class Gallery extends Component {
       }
 
       let artData = artList.filter((dataObject)=>{
-        return dataObject.imgsrc === node.name;
+          if(dataObject.imgsrc === node.name){
+            return dataObject
+          }
       });
 
       let artdata = artData[0];
-      let object = <GalleryObject 
-        data = {artdata}
-        key={node.id}
-        source={isGif?node.publicURL:node.childImageSharp.fluid}
-        isGif={isGif}
-        />
-        if(artdata.featured){
-          artGallery.unshift(object);
+      try{
+        if(artdata === undefined){
+          throw new Error(`Check the artData file to see if ${node.name} matches with the 'imgSrc' property of this file`);
         }
         else{
-          artGallery.push(object);
+          let object = <GalleryObject 
+          data = {artdata}
+          key={node.id}
+          source={isGif?node.publicURL:node.childImageSharp.fluid}
+          isGif={isGif}
+          />
+          if(artdata.featured){
+            artGallery.unshift(object);
+          }
+          else{
+            artGallery.push(object);
+          }
+        return true;
         }
-      return true;
+    }
+    catch(e){
+      console.log(e.message);
+    }
     })
 
     return(

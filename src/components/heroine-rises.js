@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { Link, withPrefix } from "gatsby"
 import comicData from '../data/comicData';
-
+import ChapterPreview from '../components/chapterPreview';
 class HeroineRises extends Component{
 
   render(){
@@ -11,8 +11,6 @@ class HeroineRises extends Component{
 
 
     let latestChapter = comicInfo[comicInfo.length-1];
-
-    console.log(comicMeta);
 
     return(
       <div className="container">
@@ -29,7 +27,7 @@ class HeroineRises extends Component{
 
       <div className="current-chapter">
         <h5>Latest Chapter:</h5>
-        <Link to={`/${comicMeta.url}/${latestChapter.chapter}/0`}>{latestChapter.chapter + 1}. {latestChapter.title}</Link>
+        <ChapterPreview key={"latest"} link={`${comicMeta.url}/${latestChapter.chapter}/0`} chapter={latestChapter}/>
       </div>
 
       <div className="chapter-list-div">
@@ -40,20 +38,9 @@ class HeroineRises extends Component{
               let imageSource = `/comics/${comicMeta.id}/${chapter.chapter}/0.jpg`;
 
               return (
-                <Link to = {`${comicMeta.url}/${chapter.chapter}/0`} key={chapter.chapter}>
-                {
-                  comicMeta.showImages?
-                  <div className="blog-preview comic-preview">
-                  <div className="comic-preview-image" style={{backgroundImage:`url(${withPrefix(imageSource)})`}} alt={chapter.title}/>        
-                  <div className="blog-preview-content">
-                    <h5>{chapter.title}</h5>
-                  </div>  
-                  </div>
-                  :
-                  <li>{chapter.chapter+1}. {chapter.title}</li>
-
-                }
-                </Link>
+                <li>
+                  <ChapterPreview key={chapter.chapter} link={`${comicMeta.url}/${chapter.chapter}/0`} chapter={chapter}/>
+                </li>
               )
             })
           }

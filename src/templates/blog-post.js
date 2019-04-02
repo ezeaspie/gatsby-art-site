@@ -5,7 +5,6 @@ import Img from "gatsby-image"
 
 export default ({ data }) => {  
     const post = data.markdownRemark;
-    console.log(post);  
     return (
     <Layout>
       <div className="container">        

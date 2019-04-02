@@ -21,7 +21,7 @@ class Comics extends Component {
                         <div className="comic-overview-excerpt">
                         {comic.excerpt}
                         </div>
-                        <Link to={comic.url}><h4>Read Now!</h4></Link>
+                        <Link to={comic.url}><button className="btn btn-call-to-action">Read Now!</button></Link>
                     </div>
                 </div>
               )

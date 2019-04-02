@@ -663,6 +663,10 @@ pre tt:after {
   box-shadow: 5px 5px 10px rgba(0,0,0,.3);
 }
 
+.comic-overview-excerpt{
+  margin-bottom:1.35em;
+}
+
 .gallery-item-tag,
 .blog-preview,
 .comic-overview-content{
@@ -860,20 +864,22 @@ html{
   justify-content: space-around;
 }
 
-.comic-chapter-list a{
-  margin:0 1em;
+.chapter-preview a{
+  display: inline-block;
+  margin:0 .5em;
+  width:100%;
+  height: 100%;
 }
-
 .comic-chapter-list li,
-.current-chapter a
+.chapter-preview
 {
   background: #1d1d1d;
   color: #EDEAE5;
   border-radius: 5px;
   box-shadow: 5px 5px 10px rgba(0,0,0,.3);
-  padding: .2em 1em;
   opacity: .9;  
   transition:ease-in-out .3s all;
+  width:100%;
 }
 
 .comic-chapter-list li:hover,
@@ -1268,6 +1274,59 @@ html{
   width:80%;
 }
 
+.btn{
+  font-weight:bold;
+  border:none;
+  transition:ease-in-out .4s transform;
+  padding:.5em 1em;
+  border-radius:5px;
+}
+
+.btn:hover{
+  transform: scale(1.025);
+  cursor: pointer;
+}
+
+.btn-call-to-action{
+  background:#38c968;
+  color:#fff;
+}
+
+.btn-info{
+  background:#2e8bf5;
+  color:#fff;
+}
+
+.btn-set{
+  display: inline-block;
+}
+
+.btn-set a{
+  display: inline;
+}
+
+.chapter-preview{
+  display: flex;
+  flex-direction:column;
+  padding:.75em 1em;
+}
+
+.chapter-preview-desc{
+  max-height:0;
+  overflow: hidden;
+  transition: ease-in-out .4s max-height;
+}
+
+.shown{
+  max-height:1000px;
+}
+
+.chapter-preview-main{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 footer{
   background: #1d1d1d;
   color:#edeae5;
@@ -1335,14 +1394,11 @@ footer a {
   display: flex;
   align-content: center;
   align-items: center;
-  border: solid 5px;
-  border-radius: 5px;
   transition:ease .5s opacity;
 }
 
 .support-links li:hover{
   opacity: .8;
-  transition:ease .5s opacity;
 }
 
 .support-links img{
@@ -1351,17 +1407,17 @@ footer a {
 }
 
 .support-links a{
-  color:#000;
+  box-sizing:border-box;
+  border:solid 5px #41aa64;
+  border-radius:5px;
+  background:#38c968;
+  color:#fff;
   width: 100%;
   padding:1em;
   font-weight: bold;
   display: flex;
   align-content: center;
   align-items: center;
-}
-
-.support-links a:hover {
-  color:#000;
 }
 
 @-webkit-keyframes hide {

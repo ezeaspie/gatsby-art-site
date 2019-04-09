@@ -35,6 +35,13 @@
         "description":"Madeline travels to the Palisades to meet Ada Lima, who has had her valuable ruby ring stolen from her home."
     },
     {
+        "comicId":0,
+        "chapter":5,
+        "pages": 17,
+        "title":"Ada, Robert, and the Ring",
+        "description":"Madeline meets Robert Silva - the wealthy and arrogant husband of Ada Lima and gets access to important evidence. Meanwhile, a argument brews over in the Isle of Tranqulity."
+    },
+    {
         "comicId":1,
         "chapter":0,
         "pages":3,

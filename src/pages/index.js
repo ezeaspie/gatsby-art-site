@@ -5,13 +5,11 @@ import SEO from '../components/seo'
 import Banner from '../components/Banner';
 import Img from 'gatsby-image';
 import comicData from '../data/comicData';
-import InstagramFeed from '../components/InstagramFeed';
 
 const IndexPage = ({data}) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <Banner />
-    <InstagramFeed data={data.allInstaNode}/>
     <div className="container">
     <h4 className="main-header">Recent Blog Posts</h4>
     <div className="blog-preview-list">
@@ -77,23 +75,6 @@ export const query = graphql`
             slug
           }
           excerpt
-        }
-      }
-    }
-    allInstaNode(limit:10){
-      edges{
-        node{
-          id
-          likes
-          preview
-          timestamp      
-          localFile {
-            childImageSharp{
-              fluid(maxWidth:200){
-                ...GatsbyImageSharpFluid, 
-              }
-          }
-        }
         }
       }
     }

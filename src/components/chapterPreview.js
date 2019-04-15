@@ -13,7 +13,7 @@ class ChapterPreview extends Component {
         return(
             <div className="chapter-preview">
                     <div className="chapter-preview-main">
-                        {chapter.chapter+1}. {chapter.title}
+                        <p>{chapter.chapter+1}. {chapter.title}</p>
                         <div className="btn-set">
                         <button 
                         onClick={()=>this.setState({descIsShown:!this.state.descIsShown})}

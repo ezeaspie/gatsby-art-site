@@ -2,12 +2,14 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Img from "gatsby-image"
+import SEO from '../components/seo';
 
 export default ({ data }) => {  
     const post = data.markdownRemark;
     return (
     <Layout>
-      <div className="container">        
+      <div className="container">
+          <SEO title={`${post.frontmatter.title} | Blog`} keywords={[`${post.frontmatter.title}`, `blog`, 'comic', 'Ezequiel Espinoza']} />    
           <Img className="blog-main-img" fluid={post.frontmatter.cover_image.childImageSharp.fluid} alt={post.frontmatter.title}/>        
           <div className="blog-main-div">
           <h1>{post.frontmatter.title}</h1>

@@ -10,7 +10,9 @@ export default ( data ) => {
     let comicName = comicData[chapterInfo.comicId].title;
     return (
     <Layout>
-        <SEO title={`Page ${chapterInfo.currentPage+1} | ${comicName} | Chapter ${chapterInfo.chapterId+1}`} keywords={[`Chapter ${chapterInfo.chapterId+1}`, `${comicName}`, `${chapterInfo.chapterTitle}`]} />
+        <SEO title={`${comicName} | Chapter ${chapterInfo.chapterId+1} : ${chapterInfo.chapterTitle} | Page ${chapterInfo.currentPage+1}`} 
+            
+            keywords={[`Chapter ${chapterInfo.chapterId+1}`, `${comicName}`, `${comicName} Chapter ${chapterInfo.chapterId+1}`, `${chapterInfo.chapterTitle}`, 'comic', 'Ezequiel Espinoza']} />
         <Reader chapterInfo={chapterInfo}/>
         
     </Layout>

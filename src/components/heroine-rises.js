@@ -32,19 +32,13 @@ class HeroineRises extends Component{
 
       <div className="chapter-list-div">
       <h5>Chapters</h5>
-        <ul className="comic-chapter-list" id={comicMeta.showImages?"":"comic-title-only"}>
           {
             comicInfo.map((chapter)=>{
-              let imageSource = `/comics/${comicMeta.id}/${chapter.chapter}/0.jpg`;
-
               return (
-                <li>
                   <ChapterPreview key={chapter.chapter} link={`${comicMeta.url}/${chapter.chapter}/0`} chapter={chapter}/>
-                </li>
               )
             })
           }
-        </ul>
       </div>
   </div>
       </div>
